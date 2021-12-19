@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bulma";
 
 .notification:not(:last-child){
@@ -28,5 +27,5 @@
 	height: 940px;
 	background-image: url(meal.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
