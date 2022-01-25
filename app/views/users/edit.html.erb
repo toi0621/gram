@@ -8,6 +8,7 @@
   </div>
 </section>
 
+<!--エラー-->
 <% if @user.errors.any? %>
   <div class="notification is-danger">
     <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
@@ -19,7 +20,7 @@
   </div>
 <% end %>
 
-section class="section">
+<section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-6">
