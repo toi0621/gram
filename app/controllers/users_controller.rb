@@ -6,11 +6,9 @@ class UsersController < ApplicationController
     @users = User.all
   end
   
-
   def show
     @user = User.find(params[:id])
   end
-
 
   def edit
     @user = User.find(params[:id])
@@ -18,7 +16,6 @@ class UsersController < ApplicationController
       redirect_to users_path, alert: '不正なアクセスです'
     end
   end
-  
   
   def update
     @user = User.find(params[:id])
@@ -29,11 +26,9 @@ class UsersController < ApplicationController
     end
   end
   
-  
   private
   def user_params
     params.require(:user).permit(:username, :email, :profile, :profile_image)
   end
-  
   
 end

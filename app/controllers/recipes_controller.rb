@@ -6,16 +6,13 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
-
   def show
     @recipe = Recipe.find(params[:id])
   end
 
-
   def new
     @recipe = Recipe.new
   end
-
 
   def create
     @recipe = Recipe.new(recipe_params)
@@ -26,7 +23,6 @@ class RecipesController < ApplicationController
       render :new
     end
   end
-  
 
   def edit
     @recipe = Recipe.find(params[:id])
@@ -34,7 +30,6 @@ class RecipesController < ApplicationController
       redirect_to recipes_path, alert: '不正なアクセスです'
     end
   end
-  
 
   def update
     @recipe = Recipe.find(params[:id])
@@ -44,7 +39,6 @@ class RecipesController < ApplicationController
       render :edit
     end
   end
-  
 
   def destroy
     recipe = Recipe.find(params[:id])
@@ -52,11 +46,9 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-
   private
   def recipe_params
     params.require(:recipe).permit(:title, :body, :image)
   end
-
 
 end

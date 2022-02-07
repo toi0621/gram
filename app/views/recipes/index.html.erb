@@ -22,7 +22,6 @@
                 <% end %>
               </figure>
             </div>
-
             <div class="card-content">
               <div class="media">
                 <div class="media-left">
@@ -30,17 +29,14 @@
                     <%= attachment_image_tag recipe.user, :profile_image, fallback: "no-image-icon.jpg", class: "profile_image" %>
                    </figure>
                 </div>
-
                 <div class="media-content">
                   <div class="title"><%= link_to recipe.user.username, user_path(recipe.user) %></div>
                  </div>
               </div>
-
               <div class="content">
                 <time><%= recipe.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
               </div>
             </div>
-
           </div>
         </div>
       <% end %>
