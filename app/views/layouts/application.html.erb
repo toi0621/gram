@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <!--フラッシュメッセージ-->
+  <!--フラッシュ-->
     <% if flash[:notice] %>
       <div class="notification is-info">
         <p class="notice"><%= notice %></p>
@@ -35,7 +35,7 @@
       </div>
 
       <% if user_signed_in? %>
-      <!-- ログイン時-->
+      <!-- ログイン-->
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
             <%= link_to "投稿一覧",recipes_path,  class: "navbar-item button is-warning is-light" %>
@@ -61,7 +61,7 @@
         </div>
       <% else %>
 
-      <!--ログアウト時-->
+      <!--ログアウト-->
         <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div class="navbar-item">
             <%= link_to "投稿一覧", recipes_path, class: "navbar-item button is-warning is-light" %>

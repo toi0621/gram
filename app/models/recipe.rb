@@ -8,5 +8,4 @@ class Recipe < ApplicationRecord
     validates :body
     validates :image
   end
-
 end
