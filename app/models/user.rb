@@ -7,6 +7,11 @@ class User < ApplicationRecord
  attachment :profile_image
 
  has_many :recipes, dependent: :destroy
+ has_many :likes, dependent: :destroy
+ has_many :likes_recipes, through: :likes, source: :recipe
+ def already_liked?(recipe)
+   self.likes.exists?(recipe_id: recipe.id)
+ end
 
  validates :username, presence: true
 
